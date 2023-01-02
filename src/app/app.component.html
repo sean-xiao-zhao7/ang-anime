@@ -38,7 +38,12 @@
   <div class="row">
     <div class="col-xs-12">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of list">
+        <li
+          class="list-group-item"
+          *ngFor="let item of list; let index = index"
+          [@list2]="in"
+          (click)="onDelete(index)"
+        >
           {{ item }}
         </li>
       </ul>
